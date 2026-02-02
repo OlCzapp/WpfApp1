@@ -48,7 +48,7 @@
                         <ComboBoxItem Content="Skandynawski"></ComboBoxItem>
                     </ComboBox>
                 </StackPanel>
-                
+
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
                     <TextBlock Text="Ocena zamówionego stołu: "></TextBlock>
                     <Slider Width="150" Minimum="1" Maximum="5" TickFrequency="1" IsSnapToTickEnabled="True" Margin="10,0,0,0"/>
