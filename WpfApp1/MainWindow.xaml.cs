@@ -20,5 +20,47 @@ namespace WpfApp1
         {
             InitializeComponent(); 
         }
+
+        private void opinia_Click(object sender, RoutedEventArgs e)
+        {
+            string imie_ = imie.Text;
+            string nazwisko_ = nazwisko.Text;
+            string plec_ = "";
+
+            if (k.IsChecked == true)
+            {
+                plec_ = "Kobieta";
+            }
+            else if (m.IsChecked == true)
+            {
+                plec_ = "Mężczyzna";
+            }
+            else
+            {
+                plec_ = "Inna";
+            }
+
+            var item = combobox.SelectedItem;
+            
+            bool isChecked;
+            if (isChecked = tak.IsChecked == true)
+            {
+                opiniaVisibility.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                opiniaVisibility.Visibility = Visibility.Hidden;
+            }
+
+            string opinia_Klienta = opiniaKlienta.Text;
+
+
+            MessageBox.Show("Opinia osoby: " + imie_ + " " + nazwisko_ + "; Płeć: " + plec_ + "; Model: " + item +"; Opinia klienta: "+ opinia_Klienta);
+        }
+
+        private void tak_Checked(object sender, RoutedEventArgs e)
+        {
+            opiniaVisibility.Visibility = tak.IsChecked == true ? Visibility.Visible : Visibility.Hidden;
+        }
     }
 }
