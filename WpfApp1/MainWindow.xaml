@@ -23,17 +23,17 @@
                         <TextBlock Text="Nazwisko:"/>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" Margin="20,0,0,0">
-                        <TextBox Width="200" Margin="0,10,0,10"/>
-                        <TextBox Width="200"/>
+                        <TextBox x:Name="imie" Width="200" Margin="0,10,0,10"/>
+                        <TextBox x:Name="nazwisko" Width="200"/>
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Margin="0,30,0,0">
                     <GroupBox Header="Płeć:" BorderBrush="White" Padding="5" BorderThickness="2">
                         <StackPanel Orientation="Horizontal">
-                            <RadioButton Margin="0,5,0,5" Content="Kobieta"></RadioButton>
-                            <RadioButton Margin="5" Content="Mężczyzna"></RadioButton>
-                            <RadioButton Margin="5" Content="wolę nie podawać"></RadioButton>
+                            <RadioButton x:Name="k" GroupName="plec" Margin="0,5,0,5" Content="Kobieta"></RadioButton>
+                            <RadioButton x:Name="m" GroupName="plec" Margin="5" Content="Mężczyzna"></RadioButton>
+                            <RadioButton x:Name="inne" GroupName="plec" IsChecked="True" Margin="5" Content="wolę nie podawać"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
@@ -41,11 +41,11 @@
                 <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
                     <TextBlock Text="model: "></TextBlock>
                     <ComboBox Width="120" Margin="35,0,0,0" >
-                        <ComboBoxItem Content="Klasyczny"></ComboBoxItem>
-                        <ComboBoxItem Content="Nowoczesny"></ComboBoxItem>
-                        <ComboBoxItem Content="Rustykalny"></ComboBoxItem>
-                        <ComboBoxItem Content="Industrialny"></ComboBoxItem>
-                        <ComboBoxItem Content="Skandynawski"></ComboBoxItem>
+                        <ComboBoxItem Name="a" Content="Klasyczny"></ComboBoxItem>
+                        <ComboBoxItem Name="b" Content="Nowoczesny"></ComboBoxItem>
+                        <ComboBoxItem Name="c" Content="Rustykalny"></ComboBoxItem>
+                        <ComboBoxItem Name="d" Content="Industrialny"></ComboBoxItem>
+                        <ComboBoxItem Name="e" Content="Skandynawski"></ComboBoxItem>
                     </ComboBox>
                 </StackPanel>
 
@@ -62,19 +62,17 @@
             <StackPanel>
                 <StackPanel Margin="10,0,0,0">
                     <TextBlock Text="Czy polecił(a)byś naszą firmę znajomym?" Margin="0,20,0,5"/>
-                    <CheckBox Content="Tak, zdecydowanie" Margin="0,5,0,5"/>
-                    <CheckBox Content="Może, zależy od sytuacji" Margin="0,5,0,5"/>
-                    <CheckBox Content="Nie, nie polecę" Margin="0,5,0,5"/>
+                    <CheckBox x:Name="tak" Content="Tak, zdecydowanie" Margin="0,5,0,5"/>
                 </StackPanel>
                 
-                <StackPanel>
+                <StackPanel Visibility="Hidden">
                     <TextBlock Text="Dodatkowe uwagi dotyczące zamówionego stołu:" Margin="10,10,10,10"/>
-                    <TextBox Width="300" Height="100" TextWrapping="Wrap" AcceptsReturn="True"/>
+                    <TextBox Width="300" Height="150" TextWrapping="Wrap" AcceptsReturn="True"/>
                 </StackPanel>
 
                 <StackPanel HorizontalAlignment="Center">
-                    <Button Content="Wyślij opinię" Width="100" Margin="10,20,0,0"/>
-                    <TextBlock Foreground="#8a6f34" FontSize="20" Text="Dziękujemy za poświęcony czas!" Margin="10,10,0,0" HorizontalAlignment="Center"/>
+                    <TextBlock Visibility="Hidden" Foreground="#8a6f34" FontSize="20" Text="Dziękujemy za poświęcony czas!" Margin="10,10,0,0" HorizontalAlignment="Center"/>
+                    <Button x:Name="opinia" Click="opinia_Click" Content="Wyślij opinię" Width="150" Height="30" Margin="10,20,0,0"/>
                 </StackPanel>
             </StackPanel>
         </GroupBox>
