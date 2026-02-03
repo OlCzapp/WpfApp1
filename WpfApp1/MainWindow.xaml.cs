@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -54,8 +55,10 @@ namespace WpfApp1
 
             string opinia_Klienta = opiniaKlienta.Text;
 
+            int sliderValue_ = (int)sliderValue.Value;
+            Debug.WriteLine("Slider Value: " + sliderValue_);
 
-            MessageBox.Show("Opinia osoby: " + imie_ + " " + nazwisko_ + "; Płeć: " + plec_ + "; Model: " + item +"; Opinia klienta: "+ opinia_Klienta);
+            MessageBox.Show("Opinia osoby: " + imie_ + " " + nazwisko_ + "; Płeć: " + plec_ + "; Model: " + item +"; Wystawiona ocena: "+ sliderValue_ +"; Opinia klienta: "+ opinia_Klienta);
         }
 
         private void tak_Checked(object sender, RoutedEventArgs e)
