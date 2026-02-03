@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="420" Width="900"
-        Background="#FFEFD5">
+        Background="#ede3cc">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -74,7 +74,7 @@
 
                 <StackPanel HorizontalAlignment="Center">
                     <Button Content="Wyślij opinię" Width="100" Margin="10,20,0,0"/>
-                    <TextBlock FontSize="20" Text="Dziękujemy za poświęcony czas!" Margin="10,10,0,0" HorizontalAlignment="Center"/>
+                    <TextBlock Foreground="#8a6f34" FontSize="20" Text="Dziękujemy za poświęcony czas!" Margin="10,10,0,0" HorizontalAlignment="Center"/>
                 </StackPanel>
             </StackPanel>
         </GroupBox>
